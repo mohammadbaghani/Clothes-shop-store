@@ -1,0 +1,336 @@
+import path from 'path';
+import fs from 'fs/promises';
+import classes from '../../styles/event-item.module.css';
+import Head from 'next/head';
+import Image from 'next/image';
+import MainHeadercopy from "../main-header";
+import React, { useEffect, useState } from "react";
+import db from "../../data/dummy-backend";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { AiFillEye } from "react-icons/ai";
+import { IoStar } from "react-icons/io5";
+import Typography from '@mui/material/Typography';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
+import { motion, transform } from "framer-motion";
+import { MdOutlineMenu } from "react-icons/md";
+
+function Home(props) {
+  const [backgroundImage, setBackgrounImage] = useState("../images/s.jpg");
+  let colorsArray = ['/../images/ab 1 (1).jpg', '/../images/recipe.png', '/../images/birth.jpg', '/../images/birth.jpg', '/../images/birth.jpg', '/../images/birth.jpg']
+  setInterval(function () {
+    setBackgrounImage(colorsArray[Math.floor(Math.random() * colorsArray.length)])
+
+  }, 3000)
+  const { products } = props;
+  const [color, setcolor] = useState("");
+  const [search, setSearch] = useState("");
+  const [homes, setHomes] = useState([...db.shirts]);
+  const [newclass, setNewclass] = useState(false);
+  const [flag, setFlag] = useState(true);
+  const [newclassthree, setNewclassthree,] = useState(false);
+  const [newclasstow, setNewclasstow,] = useState(false);
+  const [filtercontainer, setfiltercontainer,] = useState('filter-container');
+  const [newclassfive, setNewclassfive,] = useState(true);
+  const [newclassfour, setNewclassfour,] = useState(false);
+  const [container, setcontainer] = useState('containerall');
+  const [lang, setlang] = useState('farsi');
+  const isServer = typeof window === 'undefined'
+  const WOW = !isServer ? require('wowjs') : null
+  useEffect(() => {
+    AOS.init();
+    const seareched = db.shirts.filter((home) => home.title.includes(search));
+    setHomes(seareched);
+  }, [search]);
+  const [sweets, setSweets] = useState([]);
+  function addProductToCart(d) {
+    let mainProduct = db.shirts.find(t => {
+      return t.price === d
+    })
+    setSweets(sweets.concat({ mainProduct }))
+  }
+  function price() {
+    setNewclass(false)
+    setNewclasstow(false)
+    setNewclassthree(false)
+    setNewclassfour(true)
+    setNewclassfive(false)
+    setfiltercontainer('ex')
+    const price = db.shirts.sort((b, a) => a.price - b.price);
+    setcontainer('containerprice')
+    setHomes(price);
+  }
+  function deserts() {
+
+    setNewclass(true)
+    setcontainer('containershoes')
+    setNewclasstow(false)
+    setNewclassthree(false)
+    setNewclassfour(false)
+    setNewclassfive(false)
+    setfiltercontainer('g')
+    const newst = db.shirts.slice().filter(a => a.kindof === "shoe");
+
+    setHomes(newst)
+  }
+  function newst() {
+
+    setNewclass(false)
+    setNewclasstow(true)
+    setNewclassthree(false)
+    setcontainer('containermen')
+    setNewclassfour(false)
+    setNewclassfive(false)
+    setfiltercontainer('gg')
+    const sweet = db.shirts.filter(a => a.men === "yes");
+    setHomes(sweet)
+  }
+  function name() {
+    setNewclass(false)
+    setNewclasstow(false)
+    setcontainer('containerwomen')
+    setNewclassfour(false)
+    setNewclassfive(false)
+    setNewclassthree(true)
+    setfiltercontainer('v')
+    const name = db.shirts.filter(a => a.men === "no");
+    setHomes(name);
+  }
+
+  function all() {
+    setNewclass(false)
+    setNewclasstow(false)
+    setfiltercontainer('filter-container')
+    setNewclassfour(false)
+    setNewclassfive(true)
+    setNewclassthree(false)
+    setcontainer('containerall')
+    setHomes([...db.shirts])
+  }
+
+  function showcolor() {
+    setcolor(event.target.dataset.color)
+  }
+  const [isHovering, setIsHovered] = useState(false);
+  function flagfalse() {
+    if (flag === true) { setFlag(false); }
+    else (setFlag(true))
+  }
+  const wrapperVariants = {
+    hidden: {
+      opacity: 0,
+      x: '100vw'
+    },
+    exit: {
+      x: "-100vh",
+
+      transition: { ease: 'easeInOut' }
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: 'spring', delay: 0.1 }
+    },
+    containerall: {
+      opacity: 1,
+      x: [-20, 0],
+      y: [20, 0],
+      transition: { type: 'spring', delay: 0.1 }
+    },
+    containershoes: {
+      opacity: 1,
+      x: [-20, 0],
+      y: [20, 0],
+      transition: { type: 'spring', delay: 0.1 }
+    },
+    three: {
+      opacity: [.5, 1],
+      x: [60, 0],
+      y: [-20, 0],
+      scale: [.5, 1],
+      transition: { type: 'spring', delay: 0.1 }
+    },
+    tow: {
+      opacity: [.5, 1],
+      scale: [.5, 1],
+      x: [0, 0],
+      y: [20, 0],
+      transition: { type: 'spring', delay: 0.1 }
+    },
+    one: {
+      opacity: [.5, 1],
+      scale: [.5, 1],
+      x: [-60, 0],
+      y: [20, 0],
+      transition: { type: 'spring', delay: 0.1 }
+    },
+
+  };
+
+  return (
+    <div className={container} >
+      <MainHeadercopy />
+      <Head>
+        <title>
+          لیست پوشاک مد روز
+        </title>
+      </Head>
+      <button className={flag ? "filter-title down hiddendown" : "  filter-title down"} onClick={() => flagfalse()}>      </button>
+      <div role="presentation"  >
+        <Breadcrumbs aria-label="breadcrumb" className='breadcramptow z-index-breadcramp'>
+          <Link underline="hover" color="inherit" href={`../firstpage`} className='breadcramp'>
+            خانه
+          </Link>
+          <Link
+            underline="hover"
+            color="inherit"
+            href={`../list`}
+            className='breadcramp'>
+            خرید آنلاین
+          </Link>
+        </Breadcrumbs>
+      </div>
+      <div className={filtercontainer}>
+        <div className={flag ? 'valed-filters' : 'hided'}>
+          <div className="search">
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="جستجوی سریع محصول ...">
+            </input>
+            <Image width={500} src="/s.png"
+              height={500}
+              alt="عکس موجود نیست"
+              className='search-icon' />
+          </div>
+
+          <div className="grouping" >
+
+            <MdOutlineMenu className="grouping-icon" />
+            <a>
+              دسته بندی کالاها
+            </a>
+          </div>
+          <div className='parent-filters'>
+            <div className={newclassfour ? "colored filtering bef price-filter" : "filtering bef price-filter"} onClick={() => price()}>
+              <a>
+                گرانترین
+              </a>
+            </div>
+            <div className={newclass ? "colored filtering bef" : "filtering bef"} onClick={() => deserts()} >
+              <a >
+                کفش
+              </a>
+            </div>
+            <div className={newclasstow ? "colored filtering bef" : "filtering bef"} onClick={() => newst()}>
+              <a >
+                مردانه
+              </a>
+            </div>
+            <div className={newclassthree ? "colored filtering bef" : "filtering bef"} onClick={() => name()}>
+              <a>
+                زنانه
+              </a>
+            </div>
+            <div className={newclassfive ? "colored filtering bef" : "filtering bef "} onClick={() => all()} >
+              <a>
+                همه
+              </a>
+            </div>
+          </div>
+
+        </div>
+   
+      </div>
+      <ul className={flag ? "list  " : "list-up"} >
+        {homes.map((p, index) => (
+          <motion.div
+            variants={wrapperVariants}
+            initial="container"
+            animate={p.animate}
+            exit="exit"
+
+          >
+            <div key={index} className='parentlies' d-aos="zoom-in-up" data-aos-duration="4650"ata>
+              <div>
+                <a className={classes.item} onClick={() => addProductToCart()} href={`/products/${p.id}`} >
+                  <div className={classes.content} >
+                    <div className={classes.date}>
+                      <Image
+                        width={500} src={p.image3}
+                        height={500}
+                        alt="عکس موجود نیست"
+                        className='image-hover' />
+                    </div>
+                  </div>
+                  <div className="price-text-text">
+                    <p>
+                      {p.title}
+                    </p>
+                  </div>
+                  <h data-color={p.color} onClick={showcolor} className={classes.pricetext}>
+                    {p.price}
+                    هزار
+                    تومان
+                  </h>
+                  <h3 className={db.shirts[index].color3} >%{p.percent}
+                    <h3 className="takhfif" >تخفیف
+                    </h3>
+                  </h3>
+                  <a href={`/products/${p.id}`}>
+                    <span className={classes.details}>
+                      <IoStar className={classes.eye} />
+                      ({p.star})
+                    </span></a>
+                </a>
+              </div>
+
+            </div>
+          </motion.div>
+
+        ))}
+      </ul>
+      <ul className={newclassfive ? "below below-up" : "below below-up hide"} >
+        همه لباس ها
+      </ul>
+      <ul className={newclasstow ? "below below-up" : "below below-up hide"} >
+
+        لباس آقایان    </ul>
+      <ul className={newclassthree ? "below below-up" : "below below-up hide"} >
+        لباس بانوان
+      </ul>
+      <ul className={newclassfour ? "below below-up" : "below below-up hide"} >
+        گران ترین
+      </ul>
+      <ul className={newclass ? "below below-up" : "below below-up hide"}>
+        انواع کفش
+      </ul>
+    </div >
+  )
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data', 'dummy-backend.json');
+  const jsonData = await fs.readFile(filePath);
+  const data = JSON.parse(jsonData);
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/no-data'
+      }
+    }
+  }
+
+  if (data.shirts.length === 0) {
+    return { notFound: true }
+  }
+  return {
+    props: {
+      products: data.shirts,
+    },
+    revalidate: 10,
+  };
+}
+export default Home;
