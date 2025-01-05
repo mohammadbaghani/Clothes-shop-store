@@ -1,5 +1,5 @@
 سایت فروشگاه لباس با Next JS زدم<br><br/>
-لینک لایو پروژه : https://shopy.liara.run 
+لینک لایو پروژه : https://shopy.liara.run/list
 <br><br/>
 Clothes store I developed by Next JS
 <br><br/>
