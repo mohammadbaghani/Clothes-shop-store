@@ -7,4 +7,4 @@
 Clothes shop I developed with Next JS
 <br>
 <br/>
-LINK of project  https://shopy.liara.run/list
+Link of project : https://shopy.liara.run/list
