@@ -14,30 +14,42 @@ a {
 
 @font-face {
   font-family: 'iranyekan';
-  src: url(../fonts/iranyekanwebmedium.2d4f96e5.woff) format('woff'),
-    url(../fonts/iranyekanwebmedium.2d4f96e5.woff2) format('woff2'),
-    url(../fonts/iranyekanwebmedium.2d4f96e5.otf) format('otf');
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
+    url(../fonts/Pinar.otf) format('otf');
 }
 
 @font-face {
   font-family: 'dana';
-  src: url(../fonts/DanaFaNum-Medium.woff2) format('woff2'),
-    url(../fonts/DanaFaNum-Medium.woff) format('woff'),
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
     url(../fonts/Pinar.otf) format('otf');
 
 }
 
 @font-face {
   font-family: 'yekan';
-  src: url(../fonts/KalamehWeb-Medium.woff2) format('woff2'),
-    url(../fonts/KalamehWeb-Medium.woff) format('woff'),
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
     url(../fonts/Pinar.otf) format('otf');
 }
 
 @font-face {
   font-family: 'IRY';
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
+    url(../fonts/Pinar.otf) format('otf');
+}
+@font-face {
+  font-family: 'takh';
   src: url(../fonts/IRY.woff2) format('woff2'),
     url(../fonts/IRY.woff) format('woff'),
+    url(../fonts/Pinar.otf) format('otf');
+}
+@font-face {
+  font-family: 'Tanha';
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
     url(../fonts/Pinar.otf) format('otf');
 }
 
@@ -877,7 +889,7 @@ h2 {
   letter-spacing: -1px;
   border-radius: 6px;
   filter: saturate(100%);
-  font-family: 'IRY' !important;
+  font-family: 'takh' !important;
   padding-right: 12px;
   transition: all 1s;
   overflow: hidden;
@@ -891,7 +903,7 @@ h2 {
   left: 0px;
   justify-content: center;
   font-weight: 500;
-  font-family: 'IRY';
+  font-family: 'takh';
   width: 50%;
   height: 100%;
   display: flex;
@@ -1491,10 +1503,10 @@ h2 {
   filter: contrast(115%);
   justify-self: flex-start !important;
   padding: 15px 15px 5px 15px !important;
-  transform: scale(1.1) !important;
+  transform: scale(1.3) !important;
   background-color: white;
   border: 2px solid black;
-  border-radius: 10px !important;
+  border-radius: 4px !important;
 }
 
 
@@ -1857,9 +1869,8 @@ h2 {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: all .4s ease-out;
-    filter: blur(0px) brightness(3) saturate(90%)contrast(140%) hue-rotate(0deg) grayscale(90%);
     transition: all 1.1s ease-out !important;
-    background-image: url(/../images/33.png) !important;
+    background-image: url(/images/33.png) !important;
     filter: blur(0) brightness(3) saturate(90%)contrast(100%) hue-rotate(0deg) grayscale(90%);
 
   }
@@ -1901,9 +1912,9 @@ h2 {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: all .4s ease-out;
-    filter: blur(0px) brightness(6) saturate(100%)contrast(100%) hue-rotate(0deg) grayscale(90%);
-    filter: blur(0) brightness(6) saturate(100%) contrast(140%) hue-rotate(0deg) grayscale(90%);
-    background-image: url(/../images/one.png) !important;
+    filter: blur(0) brightness(3) saturate(100%) contrast(140%) hue-rotate(0deg) grayscale(90%);
+
+    background-image: url(/images/w.png) !important;  
     transition: all 1.1s ease-out !important;
 
   }
@@ -1930,8 +1941,9 @@ h2 {
     background-repeat: no-repeat;
     transition: all .4s ease-out;
     filter: blur(0px) brightness(3) saturate(90%)contrast(140%) hue-rotate(0deg) grayscale(90%);
+    background-image: url(/images/one.png) !important;  
     transition: all 1.1s ease-out !important;
-    background-image: url(/../images/w.png) !important;
+  
   }
 
   .infos {
@@ -2814,7 +2826,7 @@ h2 {
   input,
   input::placeholder {
     font-family: 'IRY' !important;
-    font-size: 14px !important;
+    font-size: 14.8px !important;
     direction: rtl !important;
     color: rgb(0, 0, 0) !important;
 
@@ -3091,8 +3103,8 @@ h2 {
     display: flex;
     transform: scale(1) !important;
     background-color: #0b0b0e !important;
-    border-top-left-radius: 0px !important;
-    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius:6px !important;
     z-index: 555;
     padding: 11px 13px 11px 13px !important;
   }
@@ -3961,7 +3973,7 @@ h2 {
     border-radius: 6px !important;
     overflow: hidden !important;
     width: 200px !important;
-    border: 1px solid #eeeeee!important;    
+    border: 1px solid #eeeeee !important;
     text-align: right !important;
     transition: all .7s;
   }
@@ -5791,7 +5803,7 @@ h1 {
     padding: 0px 0px !important;
     border: 1px solid #ffffff !important;
     background-color: white !important;
-    outline: 1px solid #cfcfcf;
+    outline: 1px solid transparent;
     transform: scale(.77) !important;
     flex-direction: row !important;
   }
@@ -6134,13 +6146,11 @@ h1 {
     justify-content: center !important;
     display: flex !important;
   }
-
-
   .grouping {
     top:27.6px !important;
     left: unset;
     right: 6px;
-    font-size: 14.8px !important;
+    font-size: 15.6px !important;
     margin-right: unset;
     margin-left: auto;
     font-weight: 500 !important;
@@ -6154,7 +6164,7 @@ h1 {
     position: absolute !important;
     text-align: left;
     width: 160px;
-    padding-left: 8px !important;
+    padding-left: 10.8px !important;
     display: flex !important;
     align-items: center !important;
 
@@ -6250,8 +6260,7 @@ h1 {
     right: 0px !important;
     left: 0px !important;
     margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 30px;
+    margin-right: auto !important; 
   }
 
   .btn-text {
@@ -6479,6 +6488,7 @@ h1 {
     word-spacing: -3px !important;
     font-weight: 500 !important;
     z-index: -222 !important;
+    font-family: 'tanha' !important;
 
   }
 
@@ -7464,10 +7474,9 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     margin-right: -195px !important;
     margin-left: 200px !important;
     display: flex !important;
-    font-size: 17px;
     font-family: 'IRY' !important;
     color: #000000 !important;
-    font-size: 15px !important;
+    font-size: 17px !important;
     right: 180PX !important;
     background-color: transparent !important;
     z-index: 1;
@@ -8126,7 +8135,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     justify-content: center;
     height: 650px !important;
     align-items: center;
-    top: 155px;
+    top: 125px;
     border-radius: 3px;
     margin-right: auto;
     margin-left: auto;
@@ -8175,7 +8184,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     right: 0px;
     left: -140px;
     transition: all .2s;
-    top: 155px;
+    top: 80px;
   }
 
   .text-box::before {
@@ -8221,7 +8230,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     content: '';
     left: 75px;
     transition: all .2s;
-    top: 160px;
+    top: 125px;
     height: 750px !important;
     z-index: -3333;
   }
@@ -8238,7 +8247,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100% !important;
+    height: 140% !important;
     align-items: center;
     top: -40px;
     margin-right: auto;
@@ -8250,11 +8259,10 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     transition: all .2s;
     z-index: -3333;
     border-radius: 7px;
-    box-shadow: 1px 1px 13px .65px #817e7e !important;
     z-index: -3333;
     opacity: .96;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: white;
 
   }
 
@@ -8309,9 +8317,9 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     margin-left: auto;
     object-fit: fill;
     padding: 1px 1px;
-    top: 20px;
-
-    transform: scale(.88);
+    top: 10px;
+    transform: scale(.75);
+    cursor: pointer!important;
   }
 
   .image-orig {
@@ -8342,7 +8350,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
 
   .mySwiper {
     height: 160px !important;
-    top: 365px !important;
+    top: 325px !important;
     width: 441px !important;
     margin-right: unset !important;
     margin-left: auto !important;
@@ -8350,7 +8358,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     right: -65px !important;
     border-radius: 10px !important;
     left: unset !important;
-    transform: scale(1) !important;
+    transform: scale(.95) !important;
     align-items: center !important;
     background-color: transparent !important;
     display: flex !important;
@@ -8367,24 +8375,24 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     cursor: pointer !important;
     padding: 0px 0px;
     background-color: transparent !important;
-    margin-right: -7px !important;
+    margin-right: -11px !important;
     border-radius: 2px;
     border: 1px solid #e1e1e1 !important;
     transition: all .05s !important;
     right: -18px !important;
-    transform: scale(.85) !important;
-    top: -10px !important;
+    transform: scale(.87) !important;
+    top: -2px !important;
     box-shadow: unset !important;
   }
 
   .mySwiper .swiper-slide:active {
-    transform: scale(.8485) !important;
+    transform: scale(.8687) !important;
   }
 
   .mySwiper .swiper-slide-thumb-active {
     opacity: 4;
     background-color: transparent !important;
-    border: 1px solid black !important;
+    border:1px solid #949494 !important;
     filter: contrast(100%) brightness(100%) !important;
     transition: all .05s !important;
   }
@@ -8402,7 +8410,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     box-shadow: rgb(115, 113, 113) 2px 2px 5px 2px;
     background-color: transparent !important;
     color: black !important;
-    top: 536px !important;
+    top: 506px !important;
   }
 
   .swiper-button-prev {
@@ -8478,7 +8486,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
 
   .search {
     left: 50px !important;
-    width: 375px !important;
+    width: 390px !important;
   }
 
   .search:focus {
@@ -8861,9 +8869,9 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
 
   .parentlies {
     left: -33px !important;
-    margin-left: 8px;
+    margin-left: 7.5px;
     right: 0px;
-    margin-right: 8px !important;
+    margin-right:7.5px !important;
     position: relative;
     width: -moz-fit-content;
     width: 250px;
@@ -8874,7 +8882,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
     z-index: 66666 !important;
     top: 90px;
     z-index: 4 !important;
-    margin-top: -92px !important;
+    margin-top: -91px !important;
     transform: scale(.79) !important;
     border-radius: 0px;
     background-color: transparent !important;
@@ -9086,7 +9094,6 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
   letter-spacing: -1px;
   border-radius: 6px;
   filter: unset !important;
-  font-family: 'IRY' !important;
   padding-left: 8px;
   overflow: hidden;
   background-color: #2a2a2a !important;
@@ -9101,7 +9108,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
   right: 15px;
   justify-content: center;
   font-weight: 500;
-  font-family: 'IRY';
+  font-family: 'takh';
   width: 50%;
   height: 100%;
   display: flex;
@@ -9528,7 +9535,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
   z-index: 5555555555555 !important;
   height: 450px;
   background-repeat: no-repeat;
-  top: 7px;
+  top: 2px;
   right: 0px;
   left: 0px;
   background-size: 100% 100%;
@@ -9543,11 +9550,11 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
   width: 90%;
   object-fit: fill !important;
   background-image: unset !important;
-  border-radius:8px !important;
+  border-radius:7px !important;
   background-position: 0px 0px;max-width: 1340px;
   object-fit: contain !important;
   background-image: url(/../images/22.webp) !important;
-  filter: contrast(130%) brightness(85%) grayscale(65%);
+  filter: contrast(130%) brightness(85%) grayscale(85%);
   z-index: -2 !important;
 }
 
@@ -9556,7 +9563,7 @@ box-shadow:0px 0px 5px 0px #a19f9f !important;
   left: 0px!important;
 width: 200px!important;
   top: 455px !important;
-  margin-right: auto;font-size: 18px!important;
+  margin-right: auto;font-size: 18.8px!important;
   margin-left: auto;display: flex;letter-spacing: -.4px!important;
   justify-content: center;z-index: 444!important;
 height: 110px !important;word-spacing: -.3px!important;
@@ -9567,10 +9574,9 @@ height: 110px !important;word-spacing: -.3px!important;
 .list {
   width: 100% !important;
   max-width: 1460px;
-  top: 520px;
+  top: 525px;
   padding: 0px 0px 0px 0px !important;
   justify-content: center !important;
-
 }
 
 .containermen:before {
@@ -9711,12 +9717,12 @@ height: 110px !important;word-spacing: -.3px!important;
   width: 410px;
   display: flex;
   justify-content: center;
-  top: 147px;
+  top: 200px;
   margin-right: auto;
   margin-left: auto;
   left: 0px;
   right: 0px;
-  font-size: 21px;
+  font-size: 15px;
   text-align: center;
   font-weight: 500 !important;
   height: 60px;
@@ -9730,7 +9736,7 @@ height: 110px !important;word-spacing: -.3px!important;
   display: flex !important;
   height: 400px;
   border-radius: 6px !important;
-  top: 282px !important;
+  top: 265px !important;
   right: 360px !important;
   position: absolute !important;
   padding: 0px;
@@ -9738,13 +9744,17 @@ height: 110px !important;word-spacing: -.3px!important;
   width: 380px !important;
   filter: contrast(115%);
   justify-self: flex-start !important;
-  padding: 15px 15px 5px 15px !important;
-  transform: scale(1.1) !important;
+  padding: 30px !important;
+  transform: scale(.87) !important;
   background-color: white;
-  border: 2px solid black;
-  border-radius: 10px !important;
-}
+  border: 1px solid #c1c1c1;
+  border-radius: 3px !important;
 
+}
+.nocurser{
+  cursor: pointer!important;
+  border: none!important;
+}
 
 .css-1160xiw-MuiPaper-root-MuiDrawer-paper {
   cursor: zoom-in !important;
@@ -9752,6 +9762,15 @@ height: 110px !important;word-spacing: -.3px!important;
 
 .moredown {
   top: 334px !important;
+  color: black !important;
+  font-size: 10px !important;
+  right: 0px !important;
+
+  font-weight: 500 !important;
+
+}
+.moredownturn{
+  top: 374px !important;
   color: black !important;
   font-size: 10px !important;
   right: 0px !important;

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'dana';
-  src: url(../fonts/DanaFaNum-Medium.woff2) format('woff2'),
-    url(../fonts/DanaFaNum-Medium.woff) format('woff'),
+  src: url(../fonts/Tanha.woff2) format('woff2'),
+    url(../fonts/Tanha.woff) format('woff'),
     url(../fonts/Pinar.otf) format('otf');
 
 }
@@ -116,7 +116,7 @@
     left: 0px;
     direction: rtl;
     border-radius: 5px;
-    font-family: 'IRY';
+    font-family: 'takh' !important;
     padding: 0px 0px !important;
     letter-spacing: 0px;
     word-spacing: 0px;
@@ -255,7 +255,7 @@
     z-index: 1 !important;
     border-radius: 10px;
     overflow: hidden;
-    transition: all 2s !important;
+    transition: all .3s !important;
     filter: contrast(120%) grayscale(0%);
     background-color: transparent !important;
 
@@ -280,7 +280,7 @@
     background-color: transparent !important;
     overflow: hidden !important;
     transform: scale(1) !important;
-    border: 1px solid rgb(223, 223, 223);
+    border: 1px solid transparent;
     transition: all .02s !important;
     filter: brightness(100%) 
   }

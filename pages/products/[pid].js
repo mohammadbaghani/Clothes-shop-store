@@ -3,7 +3,7 @@ import Image from 'next/image';
 import path from 'path';
 import React, { Fragment, useState } from "react";
 import MainHeadercopy from "../main-header";
-import c from './event-logistics.module.css';
+import c from  '../../styles/event-logistics.module.css';
 import 'aos/dist/aos.css';
 import Head from 'next/head';
 import Link from '@mui/material/Link';
@@ -21,6 +21,7 @@ import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 import { FcSearch } from "react-icons/fc";
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Tilt from 'react-parallax-tilt';
 import {
     Magnifier,
     GlassMagnifier,
@@ -31,7 +32,7 @@ import {
 } from "react-image-magnifiers";
 function ProductDetailPage(props) {
     const { loadedProduct } = props;
-    const [backgrounimage, setBackgrounimage] = useState('ban');
+    const [backgrounimage, setBackgrounimage] = useState('abi');
     const [newclass, setNewclass] = useState(false);
     const [newclassthree, setNewclassthree,] = useState(true);
     const [newclasstow, setNewclasstow,] = useState(false);
@@ -108,7 +109,7 @@ function ProductDetailPage(props) {
         setMenimg('menimg')
         setImagebody('imagebody box-image')
         setSweets('text-box')
-        setBackgrounimage('abi')
+        setBackgrounimage('ban')
         setMenbutton('tem-child center-image ')
         setWomenbutton('tem-child left--image siah-image')
         setNoimage('tem-child right--image')
@@ -119,7 +120,7 @@ function ProductDetailPage(props) {
         setMenimg('menimg blackmenimg')
         setImagebody('imagebody box-image')
         setSweets('text-box')
-        setBackgrounimage('ban')
+        setBackgrounimage('abi')
         setMenbutton('tem-child center-image siah-image')
         setWomenbutton('tem-child left--image')
         setNoimage('tem-child right--image')
@@ -130,7 +131,7 @@ function ProductDetailPage(props) {
         setWomenimg('womenimg blackwomenimg')
         setMenimg('menimg')
         setImagebody('imagebody')
-        setSweets('sweets')
+        setSweets('text-box')
         setBackgrounimage('noimage')
         setMenbutton('tem-child center-image')
         setWomenbutton('tem-child left--image')
@@ -182,7 +183,7 @@ function ProductDetailPage(props) {
         alert(shoppingCart.length)
     }
     function handleClick(event) {
-    
+
         console.info('You clicked a breadcrumb.');
     }
 
@@ -239,9 +240,9 @@ function ProductDetailPage(props) {
                 <div className='tem'>
 
                     <a onClick={fixwomanBackgrounimage} className={womenbutton}>
-                
-                  عکس سه         
-              
+
+                        عکس سه
+
                     </a>
                     <a onClick={fixmanBackgrounimage} className={menbutton}>
                         عکس دو
@@ -265,26 +266,58 @@ function ProductDetailPage(props) {
                         className="imagebody" >
                         <SwiperSlide>
 
-                            <GlassMagnifier
-                                imageSrc={loadedProduct.image3}
-                                imageAlt="Example"
-                                largeImageSrc={loadedProduct.image3}
-                                className="new" />
+                            <Tilt
+                                tiltMaxAngleX={0}
+                                tiltMaxAngleY={35}
+                                perspective={900}
+                                scale={1}
+                                transitionSpeed={8000}
+                                gyroscope={true}
+                            >
+
+                                <GlassMagnifier
+                                    imageSrc={loadedProduct.image3}
+                                    imageAlt="Example"
+                                    largeImageSrc={loadedProduct.image3}
+                                    className="new" />
+                            </Tilt>
 
                         </SwiperSlide>
                         <SwiperSlide>
-                            <GlassMagnifier
-                                imageSrc={loadedProduct.image1}
-                                imageAlt="Example"
-                                largeImageSrc={loadedProduct.image1}
-                                className="new" />
+                            <Tilt
+                                tiltMaxAngleX={0}
+                                tiltMaxAngleY={35}
+                                perspective={900}
+                                scale={1}
+                                transitionSpeed={8000}
+                                gyroscope={true}
+                            >
+
+                                <GlassMagnifier
+                                    imageSrc={loadedProduct.image1}
+                                    imageAlt="Example"
+                                    largeImageSrc={loadedProduct.image1}
+                                    className="new" />
+                            </Tilt>
+
                         </SwiperSlide>
                         <SwiperSlide>
-                            <GlassMagnifier
-                                imageSrc={loadedProduct.image2}
-                                imageAlt="Example"
-                                largeImageSrc={loadedProduct.image2}
-                                className="new" />
+                            <Tilt
+                                tiltMaxAngleX={0}
+                                tiltMaxAngleY={35}
+                                perspective={900}
+                                scale={1}
+                                transitionSpeed={8000}
+                                gyroscope={true}
+                            >
+
+                                <GlassMagnifier
+                                    imageSrc={loadedProduct.image2}
+                                    imageAlt="Example"
+                                    largeImageSrc={loadedProduct.image2}
+                                    className="new" />
+                            </Tilt>
+
                         </SwiperSlide>
                     </Swiper>
 
@@ -354,6 +387,10 @@ function ProductDetailPage(props) {
                             <p className="btn-text belowermore">
                                 سایز و رنگ محصول را انتخاب نمایید
                             </p>
+
+
+
+
                             <div className="btn-text belowermore moredown">
 
                                 برای بزرگنمایی
@@ -378,18 +415,85 @@ function ProductDetailPage(props) {
                                                     <p className='mag'>
                                                         برای بزرگنمایی موس را روی عکس ببرید
                                                     </p>
-                                                    <GlassMagnifier
-                                                        imageSrc={loadedProduct.image3}
-                                                        imageAlt="Example"
-                                                        magnifierSize={'40%'}
-                                                        largeImageSrc={loadedProduct.image3}
-                                                        className="imagemagnify" />
+
+                                              
+                                                        <GlassMagnifier
+                                                            imageSrc={loadedProduct.image3}
+                                                            imageAlt="Example"
+                                                            magnifierSize={'40%'}
+                                                            largeImageSrc={loadedProduct.image3}
+                                                            className="imagemagnify" />
+
+                                                
+
                                                 </Box>
                                             </Drawer>
                                         </React.Fragment>
                                     ))}
                                 </div>
+
+
+
+
+
                             </div>
+
+                            {/* <div className="btn-text belowermore moredownturn">
+                                چرخش محصول
+
+                                <FcSearch className='mag-icon' />
+
+                                <div className='muiclass'>
+                                    {['right'].map((anchor) => (
+                                        <React.Fragment key={anchor}>
+                                            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                                            <Drawer
+                                                anchor={anchor}
+                                                open={state[anchor]}
+                                                onClose={toggleDrawer(anchor, false)}
+                                            >
+                                                <Box
+                                                    sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+                                                    role="presentation"
+                                                    onClick={toggleDrawer(anchor, false)}
+                                                    onKeyDown={toggleDrawer(anchor, false)} >
+                                                    <p className='mag'>
+                                                        برای بزرگنمایی موس را روی عکس ببرید
+                                                    </p>
+
+                                                    <Tilt
+                                                        tiltMaxAngleX={23}
+                                                        tiltMaxAngleY={23}
+                                                        perspective={900}
+                                                        scale={.8}
+                                                        transitionSpeed={2000}
+                                                        gyroscope={true}
+                                                    >
+
+                                                        <Image width={500}
+                                                            src={loadedProduct.image3}
+                                                            height={500}
+                                                            alt="عکس موجود نیست"
+                                                            className="imagemagnify nocurser" />
+
+                                                    </Tilt>
+
+                                                </Box>
+                                            </Drawer>
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+
+
+
+
+
+                            </div> */}
+
+
+
+
+
                         </div>
 
                         <div className='choose-color'>

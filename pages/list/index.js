@@ -15,13 +15,11 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import { motion, transform } from "framer-motion";
 import { MdOutlineMenu } from "react-icons/md";
-
 function Home(props) {
   const [backgroundImage, setBackgrounImage] = useState("../images/s.jpg");
   let colorsArray = ['/../images/ab 1 (1).jpg', '/../images/recipe.png', '/../images/birth.jpg', '/../images/birth.jpg', '/../images/birth.jpg', '/../images/birth.jpg']
   setInterval(function () {
     setBackgrounImage(colorsArray[Math.floor(Math.random() * colorsArray.length)])
-
   }, 3000)
   const { products } = props;
   const [color, setcolor] = useState("");
