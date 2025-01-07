@@ -5,6 +5,6 @@
 
 
 
-Clothes shop I developed with Next JS
+Clothes shop I developed by Next JS
 
 Link of project : https://shopy.liara.run/list
