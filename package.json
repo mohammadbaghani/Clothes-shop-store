@@ -33,6 +33,7 @@
     "react-image-magnifiers": "^1.4.0",
     "react-no-ssr": "^1.1.0",
     "react-parallax-tilt": "^1.7.270",
+    "react-spinners": "^0.15.0",
     "reader": "^0.0.8",
     "styled-components": "^6.1.1",
     "swiper": "^11.1.9",

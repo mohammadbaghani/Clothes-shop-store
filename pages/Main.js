@@ -1,3 +1,4 @@
+'use client'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import React, { useState } from "react";
@@ -199,7 +200,7 @@ function Home() {
                 </Link>
               </div>
               <div >
-                <Link href={`../firstpage`} className='left'>
+                <Link href={`../firstpage`} className={isActive ? 'left' : 'left newleft'} >
                 </Link>
               </div>
               <Link href={`../Callus`} className={isActive ? 'link-top buy-link' : 'link-top buy-link darker-w '}>

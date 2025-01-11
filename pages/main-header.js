@@ -1,7 +1,9 @@
 import Link from 'next/link';
 function MainHeader() {
     return (
-        <>            <header>
+        <>         
+        
+           <header>
             < div className='parent-nav borderbottem'>
                 <div className='child-nav'>
                     <div >

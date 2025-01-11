@@ -18,20 +18,6 @@
     left: 0px !important;
   }
 
-  .sweetschild {
-    width: 100%;
-    display: flex;
-    height: 500px !important;
-    top: 0px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    right: 0px;
-    left: 0px;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-  }
-
   .image {
     z-index: 10;
     display: flex;
@@ -49,43 +35,6 @@
     justify-self: flex-start;
   }
 
-
-  .text,
-  .textone,
-  .texttow {
-    font-family: 'dana';
-    z-index: 5555555;
-    font-weight: 400 !important;
-    right: 200px;
-    font-size: 17px;
-    color: #000000 !important;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    margin-top: -17px;
-    text-align: right;
-    position: absolute;
-    height: 30px;
-    top: 120px !important;
-    justify-content: flex-end;
-    padding-right: 10px;
-    background-color: transparent;
-    right: 0px !important;
-    position: absolute !important;
-    margin-right: 640px !important;
-    margin-left: auto !important;
-    left: 0px;
-    justify-self: flex-end !important;
-
-  }
-
-  .textone {
-    top: 160px !important;
-  }
-
-  .texttow {
-    top: 200px !important;
-  }
 
 
   .textfour {
@@ -112,23 +61,135 @@
     background-color: transparent !important;
   }
 
+  
+
+
+
+  .sweetschild {
+    background-color: transparent;
+    display: flex;
+    padding-top: 80px;
+    top: 25px;
+    position: absolute;
+    padding-left: 134px;
+    width: 80% !important;
+    min-width: 950px !important;
+    height: 800px !important;
+    border-radius: 0px !important;
+    right: 370px !important;
+    left: 110px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    transform: scale(1.35);
+  }
+
+  .text,
+  .textone,
+  .texttow,
+  .texthree,
+  .textprice,
+  .texttooman,
+  .textgheimat {
+    font-family: 'IRY'!important;
+    z-index: 5555555;
+    font-weight: 500 !important;
+    font-size: 15.5px;
+    color: #000000 !important;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    margin-top: 47px;
+    text-align: right;
+    position: absolute;
+    height: 40px !important;
+    top: 32px !important;
+    justify-content: center;
+    padding-right: 0px;
+    right: 0px !important;
+    position: absolute !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    left: 0px;
+    border-radius: 0px !important;
+    margin-top: 39px;
+    border: none !important;
+  }
+
+  
+
+
+  .textgheimat {
+    right: -113.5px !important;
+    font-size: 11px !important;
+    justify-self: flex-start !important;
+    border: none !important;
+    width: 30% !important;
+    top: -40px !important;
+    position: absolute !important;    
+ 
+  }
+
+  .textprice {
+    right: -53px !important;
+    color: #000000 !important;
+    font-size: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: -35px !important;
+    position: absolute !important;
+    height: 25px !important;
+    border-radius: 1px !important;
+    font-weight: 500 !important;
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    justify-content: center;
+    background-color: transparent;
+    letter-spacing: -1px;
+    padding: 7px 1px 3px;
+    letter-spacing: 0px;    
+    font-family: 'takh'!important;
+  }
+
+  
+  .texttooman {
+    right: 22px !important;
+    left: 0px;
+    justify-self: flex-end !important;
+    border: none !important;
+    font-size: 11px !important;
+    width: 30% !important;
+    top: -40px !important;
+    position: absolute !important;     
+ 
+  }
+
+  .textone {
+    top: 75px !important;
+    color: transparent !important;
+  }
+
+
+  .texttow {
+    font-family: 'iranyekan'!important;
+    top: 76px !important;
+    font-size: 11px !important;   
+    left: 0px;
+    background-color:transparent;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3px;
+  
+}
+
+.text {
+  top: 52px !important;
+  right: -91px !important;
+}
 }
 
 @media (min-width: 768px) {
 
-  .sweetschild {
-    width: 700px !important;
-    display: flex;
-    height: 500px !important;
-    padding-top: 140px;
-    top: -70px;
-    border-radius: 10px !important;
-    right: 0px !important;
-    left: 0px !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    position: relative;
-  }
 
   .textimage {
     position: absolute;
@@ -137,33 +198,7 @@
     transform: scale(1.1);
   }
 
-  .text,
-  .textone,
-  .texttow,
-  .texthree {
-    font-family: 'IRY' !important;
-    z-index: 5555555;
-    font-weight: 400 !important;
-    font-size: 17px;
-    color: #000000 !important;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    margin-top: 47px;
-    text-align: right;
-    position: absolute;
-    height: 40px;
-    top: 270px !important;
-    justify-content: flex-end;
-    padding-right: 50px;
-    right: 0px !important;
-    position: absolute !important;
-    margin-right: 540px !important;
-    margin-left: auto !important;
-    left: 300px;
-    justify-self: flex-end !important;
-    border-bottom: 1px solid rgb(209, 209, 209);
-  }
+
 
   .textfour {
     top: 267px !important;
@@ -256,17 +291,6 @@
 
   }
 
-  .textone {
-    top: 160px !important;
-  }
-
-  .texttow {
-    top: 210px !important;
-  }
-
-  .texthree {
-    top: 100px !important;
-  }
 
   .description {
     display: flex;
@@ -282,27 +306,13 @@
     top: 376px;
     padding: 10px 30px 10px 30px;
   }
+
+
+
 }
 
 @media (min-width:992px) {
 
-  .sweetschild {
-    background-color: transparent;
-    display: flex;
-    padding-top: 80px;
-    top: 25px;
-    position: absolute;
-    padding-left: 134px;
-    width: 80% !important;
-    min-width: 950px !important;
-    height: 800px !important;
-    border-radius: 0px !important;
-    right: 370px !important;
-    left: 110px !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    transform: scale(1.35);
-  }
 
   .textimage {
     position: absolute;
@@ -310,84 +320,6 @@
     transform: scale(1.1);
   }
 
-  .text,
-  .textone,
-  .texttow,
-  .texthree,
-  .textprice,
-  .texttooman,
-  .textgheimat {
-    font-family: 'yekan' !important;
-    z-index: 5555555;
-    font-weight: 500 !important;
-    font-size: 15.5px;
-    color: #000000 !important;
-    width: 240px;
-    display: flex;
-    align-items: center;
-    margin-top: 47px;
-    text-align: right;
-    position: absolute;
-    height: 40px !important;
-    top: 32px !important;
-    justify-content: center;
-    padding-right: 0px;
-    right: 0px !important;
-    position: absolute !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    left: 0px;
-    border-radius: 0px !important;
-    margin-top: 39px;
-    border: none !important;
-  }
-  .textx,
-  .textonex,
-  .texttowx,
-  .texthreex,
-  .textpricex,
-  .texttoomanx,
-  .textgheimatx {
-    font-family: 'yekan' !important;
-    z-index: 5555555;
-    font-weight: 500 !important;
-    font-size: 15.5px;
-    color: #ffffff !important;
-    width: 240px;
-    display: flex;
-    align-items: center;
-    margin-top: 47px;
-    text-align: right;
-    position: absolute;
-    height: 40px !important;
-    top: 32px !important;
-    justify-content: center;
-    padding-right: 0px;
-    right: 0px !important;
-    position: absolute !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    left: 0px;
-    border-radius: 0px !important;
-    margin-top: 39px;
-    border: none !important;
-  }
-  .text {
-    top: 52px !important;
-    right: -91px !important;
-  }
-
-  .textgheimat {
-    right: -113.5px !important;
-    font-size: 11px !important;
-    justify-self: flex-start !important;
-    border: none !important;
-    width: 30% !important;
-    top: -40px !important;
-    position: absolute !important;    
-        font-family: 'iranyekan'!important;
-  }
-
   .textgheimatx {
     right: -113.5px !important;
     font-size: 11px !important;
@@ -399,39 +331,6 @@
         font-family: 'iranyekan'!important;
   }
 
-  .textprice {
-    right: -53px !important;
-    color: #000000 !important;
-    font-size: 10px;
-    width: -moz-fit-content;
-    width: fit-content;
-    top: -33px !important;
-    position: absolute !important;
-    height: 25px !important;
-    border-radius: 1px !important;
-    font-weight: 500 !important;
-    display: flex;
-    align-items: center;
-    padding-top: 2px;
-    justify-content: center;
-    background-color: transparent;
-    letter-spacing: -1px;
-    padding: 7px 1px 3px;
-    letter-spacing: 0px;    
-       font-family: 'iranyekan'!important;
-  }
-
-  .texttooman {
-    right: 22px !important;
-    left: 0px;
-    justify-self: flex-end !important;
-    border: none !important;
-    font-size: 11px !important;
-    width: 30% !important;
-    top: -40px !important;
-    position: absolute !important;     
-      font-family: 'iranyekan'!important;
-  }
 
   .image {
     z-index: 10;
@@ -563,54 +462,9 @@
     border-top-left-radius: 6px;
     transform: scale(1.15) !important;
     background-color: transparent !important;}
-  .textfour::before {
-    content: '';
-    top: -8px !important;
-    border-right: none !important;
-    font-family: 'IRY' !important;
-    z-index: 55555666666666666655;
-    background-color: transparent;
-    font-weight: 400 !important;
-    font-size: 16px;
-    color: rgb(0, 0, 0) !important;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 49px !important;
-    justify-content: center;
-    padding-right: 10px;
-    right: 0px !important;
-    position: absolute !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    left: 0px;
-    direction: rtl;
-    border-radius: 0px;
-  }
 
-  .textone {
-    top: 75px !important;
-    color: transparent !important;
-  }
 
-  .texttow {
-    font-family: 'iranyekan'!important;
-    top: 76px !important;
-    font-size: 11px !important;   
-    left: 0px;
-    background-color:transparent;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 3px;
-  
-}
 
-.texthree {
-  color: transparent !important;
-  top: 68px !important;
-
-}
 
 .description {
   display: flex;
