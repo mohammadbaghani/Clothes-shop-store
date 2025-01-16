@@ -50,7 +50,7 @@ function Home(props) {
     setTimeout(() => {
       setLoading(!loading)
       setcontainer('containerall')
-    }, 1500);
+    }, 1200);
   }, []);
   const [sweets, setSweets] = useState([]);
   function addProductToCart(d) {
@@ -257,7 +257,7 @@ function Home(props) {
                 <div>
                   <a className={classes.item} onClick={() => addProductToCart()} href={`/products/${p.id}`} >
                     <div className={classes.content} >
-                      <div className={classes.date}>
+                      <div >
 
 
                         <Image
@@ -270,7 +270,7 @@ function Home(props) {
 
 
                       </div>
-                      <div className={classes.date}>
+                      <div >
 
 
                         <Image
