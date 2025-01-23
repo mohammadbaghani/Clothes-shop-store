@@ -1,6 +1,7 @@
 فروشگاه لباس با Next JS زدم
 
 لینک لایو پروژه https://shopy.liara.run/list
+کتابخانه هایی که استفاده کردم : MUI Material , AOS , React-Paralex-Tilt , React-bootstrap , React-Icons ,React-image-magnifier , framer-motion , Swiper
 
 
 Clothes shop I developed by Next JS
