@@ -3,11 +3,11 @@
 لینک لایو پروژه https://shopy.liara.run/list
 <br>
 </br>
-کتابخانه هایی که استفاده کردم : MUI Material , AOS , React-Paralex-Tilt , React-bootstrap , React-Icons  
+کتابخانه هایی که استفاده کردم : 
+MUI Material , AOS , React-Paralex-Tilt , React-bootstrap , React-Icons  
 <br>
 </br>
 React-image-magnifier , framer-motion , Swiper
-
 <br>
 </br>
 Clothes shop I developed by Next JS
