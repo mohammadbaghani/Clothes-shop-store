@@ -5,8 +5,7 @@
 </br>
 کتابخانه هایی که استفاده کردم : 
 MUI Material , AOS , React-Paralex-Tilt , React-bootstrap , React-Icons  
-<br>
-</br>
+
 React-image-magnifier , framer-motion , Swiper
 <br>
 </br>
