@@ -53,7 +53,6 @@ function Home() {
         setmyimage('my-image image-middle')
         setmyimagee('my-image image-middlee')
         setfirsttitle('first-title')
-        setflipcard('flip-card upper-flip-card')
       }
       else {
         setnavheight('parent-nav')
@@ -63,7 +62,7 @@ function Home() {
         setnighticontire('night-icon tire')
         setfirsttitle('first-title')
         setmyimagee('my-image')
-        setflipcard('flip-card')
+
       }
       setLastScrollY(window.scrollY);
     }
@@ -74,13 +73,13 @@ function Home() {
     }
   }, [lastScrollY]);
   useEffect(() => {
-    if (show === 1) {
-      setTimeout(setmybutton, 100)
+    if (show === 0) {
+      setTimeout(setmybutton,10)
     }
     if (show === 2) {
       setmysecondbutton()
     }
-    if (show === 0) {
+    if (show === 1) {
       setmysecondbutton()
     }
     else (
@@ -127,7 +126,10 @@ function Home() {
 
   return (
     <>
-      <div className={styles.container}>
+
+
+      <div className={isActive ? styles.container : styles.containerblack}>
+
         <Carousel onPrevEnd={(currentItem, pageIndex) =>
           reduceState()
         }
@@ -135,25 +137,7 @@ function Home() {
             decresereState()
           }
           className='carusal' itemsToScroll={1} itemsToShow={1}>
-          <div className={isActive ? 'parent-header-black parent-header-white' : 'parent-header-black'}>
-            <div className={isActive ? firsttitle : firsttitle}  >
-              مرکز خرید
-              شیک پوشان
-              <br>
-              </br>
-              <div className='op-low' >
-                فروش آنلاین و حضوری
-                شیک ترین پوشاک مد روز
-              </div>
-            </div>
-            <Image
-              src="/../images/rbrb.png"
-              width={1000}
-              height={1000}
-              alt="عکس موجود نیست"
-              className={isActive ? myimage : myimage} >
-            </Image>
-          </div>
+
           <div className={isActive ? 'parent-header  parent-header-white' : 'parent-header'}>
 
             <div className={isActive ? 'first-title' : 'first-title'}  >
@@ -176,6 +160,27 @@ function Home() {
               className={isActive ? myimagee : myimagee} >
             </Image>
           </div>
+
+          <div className={isActive ? 'parent-header-black parent-header-white' : 'parent-header-black'}>
+            <div className={isActive ? firsttitle : firsttitle}  >
+              مرکز خرید
+              شیک پوشان
+              <br>
+              </br>
+              <div className='op-low' >
+                فروش آنلاین و حضوری
+                شیک ترین پوشاک مد روز
+              </div>
+            </div>
+            <Image
+              src="/../images/rbrb.png"
+              width={1000}
+              height={1000}
+              alt="عکس موجود نیست"
+              className={isActive ? myimage : myimage} >
+            </Image>
+          </div>
+
           <div className={isActive ? 'parent-header-black parent-header-white' : 'parent-header-black'}>
             <Image
               src="/../images/w.png"
@@ -196,20 +201,20 @@ function Home() {
             <div className='child-nav'>
               <div >
                 <Link href={`../firstpage`} className={isActive ? 'shikpooshan' : 'shikpooshan blured'} >
-                  شیک پوشان
+
                 </Link>
               </div>
               <div >
                 <Link href={`../firstpage`} className={isActive ? 'left' : 'left newleft'} >
                 </Link>
               </div>
-              <Link href={`../Callus`} className={isActive ? 'link-top buy-link' : 'link-top buy-link darker-w '}>
+              <Link href={`../Callus`} className={isActive ? 'link-top ' : 'link-top  darker-w '}>
                 تماس با ما
               </Link>
               <Link href={`../About`} className={isActive ? 'link-top' : 'link-top  darker-w '}>
                 درباره ما
               </Link>
-              <Link href={`../list`} className={isActive ? 'link-top buy-link' : 'link-top buy-link darker-w '}>
+              <Link href={`../list`} className={isActive ? 'link-top ' : 'link-top  darker-w '}>
                 خرید
                 آنلاین
               </Link>

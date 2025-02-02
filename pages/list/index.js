@@ -40,6 +40,7 @@ function Home(props) {
   const isServer = typeof window === 'undefined'
   const WOW = !isServer ? require('wowjs') : null
   let [loading, setLoading] = useState(true);
+  let [newsearchclass, setnewsearchclass] = useState('search');
   let [showcontent, SetShowcontent] = useState('show-contecnt');
   useEffect(() => {
     AOS.init();
@@ -50,6 +51,7 @@ function Home(props) {
     setTimeout(() => {
       setLoading(!loading)
       setcontainer('containerall')
+      window.scroll(0,0)
     }, 1200);
   }, []);
   const [sweets, setSweets] = useState([]);
@@ -59,27 +61,20 @@ function Home(props) {
     })
     setSweets(sweets.concat({ mainProduct }))
   }
-  function price() {
-    setNewclass(false)
-    setNewclasstow(false)
-    setNewclassthree(false)
-    setNewclassfive(false)
-    setNewclassfour(true)
-    const price = db.shirts.filter(b => b.price > 800).sort((b, a) => a.price - b.price);
-    setHomes(price);
 
-  }
   function shoes() {
+
     setNewclass(true)
     setNewclasstow(false)
     setNewclassthree(false)
     setNewclassfour(false)
     setNewclassfive(false)
-    const newst = db.shirts.filter(a => a.kindof === "shoe");
-    setHomes(newst)
+    const men = db.shirts.filter(a => a.kindof === "shoe");
+    setHomes(men)
 
   }
-  function newst() {
+  function men() {
+ 
     setNewclass(false)
     setNewclassthree(false)
     setNewclassfour(false)
@@ -87,8 +82,10 @@ function Home(props) {
     setNewclasstow(true)
     const sweet = db.shirts.filter(a => a.men === "yes");
     setHomes(sweet)
+
   }
   function name() {
+  
     setNewclass(false)
     setNewclasstow(false)
     setNewclassfour(false)
@@ -99,12 +96,14 @@ function Home(props) {
 
   }
   function all() {
+    setcontainer('containermen')
     setNewclass(false)
     setNewclasstow(false)
     setNewclassfour(false)
     setNewclassthree(false)
     setNewclassfive(true)
     setHomes([...db.shirts])
+
 
   }
   function showcolor() {
@@ -133,7 +132,7 @@ function Home(props) {
       transition: { ease: 'easeInOut' }
     },
     containerall: {
-      x: [0, 0, 0],
+      x: [500, 0, 0],
       y: [0, 0, 0], opacity: [1, 1, 1],
       transition: { ease: 'easeInOut', type: 'spring' }
     },
@@ -143,26 +142,31 @@ function Home(props) {
       transition: { ease: 'easeInOut', type: 'spring' }
     },
     containerwomen: {
-      x: [0, 0, 0],
+      x: [-500, 0, 0],
       y: [0, 0, 0], opacity: [1, 1, 1],
       transition: { ease: 'easeInOut', type: 'spring' }
-    },
-    containerprice: {
-      x: [0, 0, 0],
-      y: [0, 0, 0], opacity: [1, 1, 1],
-      transition: { ease: 'easeInOut', type: 'spring' }
-    },
+    }, 
     containershoes: {
       x: [0, 0, 0],
-      y: [0, 0, 0], opacity: [1, 1, 1],
+      y: [-500, 0, 0], opacity: [1, 1, 1],  
       transition: { ease: 'easeInOut', type: 'spring' }
     }
+    
   };
   const override = {
     display: "flex",
   };
+  function setsearchclass(){
+    setnewsearchclass('search widther')
+
+  }
+  function setinitialsearchclass(){
+    setnewsearchclass('search')
+
+  }
+
   return (
-    <div>
+    <div >
       <Head>
         <title>
           لیست پوشاک مد روز
@@ -183,14 +187,11 @@ function Home(props) {
 
       <div className={container} >
         <MainHeadercopy />
-
-
-
         <button className={flag ? "filter-title down hiddendown" : "  filter-title down"} onClick={() => flagfalse()}>      </button>
 
         <div className={filtercontainer}>
           <div className={flag ? 'valed-filters' : 'hided'}>
-            <div className="search">
+            <div className={newsearchclass} onClick={setsearchclass}>
               <input
                 type="text"
                 value={search}
@@ -215,7 +216,7 @@ function Home(props) {
                   کفش
                 </a>
               </div>
-              <div className={newclasstow ? "colored filtering " : "filtering "} onClick={() => newst()}>
+              <div className={newclasstow ? "colored filtering " : "filtering "} onClick={() => men()}>
                 <a >
                   مردانه
                 </a>
@@ -250,38 +251,29 @@ function Home(props) {
         <ul className={flag ? "list  " : "list-up"} >
           {homes.map((p, index) => (
             <motion.div
-              variants={wrapperVariants}
-
-            >
+            variants={wrapperVariants}
+            initial="hidden"
+            animate={container}
+            exit="exit"  >
               <div key={index} className='parentlies' d-aos="zoom-in-up" data-aos-duration="4650" ata>
                 <div>
                   <a className={classes.item} onClick={() => addProductToCart()} href={`/products/${p.id}`} >
                     <div className={classes.content} >
                       <div >
-
-
                         <Image
                           width={500}
                           src={p.image2}
                           height={500}
                           alt="عکس موجود نیست"
                           className={classes.img} />
-
-
-
                       </div>
                       <div >
-
-
                         <Image
                           width={500}
                           src={p.image3}
                           height={500}
                           alt="عکس موجود نیست"
                           className={classes.img2} />
-
-
-
                       </div>
                     </div>
                     <div className="price-text-text">
@@ -312,21 +304,6 @@ function Home(props) {
           ))}
         </ul>
 
-
-        {/* <ul className={newclassfive ? "below below-up" : "below below-up hide"} >
-          همه لباس ها
-        </ul>
-        <ul className={newclasstow ? "below below-up" : "below below-up hide"} >
-          لباس آقایان    </ul>
-        <ul className={newclassthree ? "below below-up" : "below below-up hide"} >
-          لباس بانوان
-        </ul>
-        <ul className={newclassfour ? "below below-up" : "below below-up hide"} >
-          گران ترین
-        </ul>
-        <ul className={newclass ? "below below-up" : "below below-up hide"}>
-          انواع کفش
-        </ul> */}
       </div >
     </div>
   )

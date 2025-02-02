@@ -203,7 +203,7 @@
     background-color: rgb(255, 255, 255) !important;
     overflow: hidden !important;
     transform: scale(1) !important;
-    border: 1px solid rgb(223, 223, 223);
+    border: 1px solid rgb(226, 226, 226);
     transition: all .02s !important;
     filter: brightness(100%);  
   }
@@ -237,7 +237,7 @@
   .item:hover {
     cursor: pointer;
     transition: all .25s !important;
-    border: 1px solid rgb(131, 131, 131);
+    border: 1px solid rgb(134, 134, 134);
   }
 
   .eye {

@@ -186,34 +186,51 @@ function ProductDetailPage(props) {
 
     return (
         <Fragment >
+
+        
+                            <div className='parent-mag'>
+                    {['right'].map((anchor) => (
+                        <React.Fragment key={anchor}>
+                            <Button onClick={toggleDrawer(anchor, true)} className='child-mag'>برای بزرگنمایی
+                            کلیک کنید
+                            
+                            <FcSearch className='mag-icon' />
+                            
+                            </Button>
+                            <Drawer
+                                anchor={anchor}
+                                open={state[anchor]}
+                                onClose={toggleDrawer(anchor, false)}>
+                                <Box
+                                    sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+                                    role="presentation"
+                                    onClick={toggleDrawer(anchor, false)}
+                                    onKeyDown={toggleDrawer(anchor, false)} >
+                                    <p className='mag'>
+                                        برای بزرگنمایی موس را روی عکس ببرید
+                                    </p>
+                                    <GlassMagnifier
+                                        imageSrc={loadedProduct.image3}
+                                        imageAlt="Example"
+                                        magnifierSize={'60%'}
+                                        largeImageSrc={loadedProduct.image3}
+                                        className="imagemagnify" />
+
+                                </Box>
+                            </Drawer>
+                        </React.Fragment>
+                    ))}
+                </div>
+
+
+
             <Head>
                 <title>
                     {loadedProduct.title}
                 </title>
             </Head>
             <MainHeadercopy />
-            <div className='muiclass'>
-                {['right'].map((anchor) => (
-                    <React.Fragment key={anchor}>
-                        <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-                        <Drawer
-                            anchor={anchor}
-                            open={state[anchor]}
-                            onClose={toggleDrawer(anchor, false)}  >
-                            <Box
-                                sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-                                role="presentation"
-                                onClick={toggleDrawer(anchor, false)}
-                                onKeyDown={toggleDrawer(anchor, false)}  >
-                                <GlassMagnifier
-                                    imageSrc={loadedProduct.image3}
-                                    imageAlt="Example"
-                                    magnifierSize={'40%'}
-                                    largeImageSrc={loadedProduct.image3}
-                                    className="imagemagnify" /> </Box>
-                        </Drawer>
-                    </React.Fragment>))}
-            </div>
+    
 
             <div role="presentation" onClick={handleClick} >
                 <Breadcrumbs aria-label="breadcrumb" className='breadcramptow'>
@@ -224,10 +241,10 @@ function ProductDetailPage(props) {
                         underline="hover"
                         color="inherit"
                         href={`../list`}
-                        className='breadcramp'>
+                        className='breadcramp sec-cramp'>
                         خرید آنلاین
                     </Link>
-                    <Typography sx={{ color: 'text.primary' }} className='breadcramp'>{loadedProduct.title}</Typography>
+                    <Typography sx={{ color: 'text.primary' }} className='breadcramp sec-cramp'>{loadedProduct.title}</Typography>
                 </Breadcrumbs>
             </div>
             <div className={backgrounimage}>
@@ -369,40 +386,19 @@ function ProductDetailPage(props) {
                             <p className="btn-text belowermore">
                                 سایز و رنگ محصول را انتخاب نمایید
                             </p>
-                            <div className="btn-text belowermore moredown">
-                                برای بزرگنمایی
-                                کلیک کنید
-                                <FcSearch className='mag-icon' />
 
-                                <div className='muiclass'>
-                                    {['right'].map((anchor) => (
-                                        <React.Fragment key={anchor}>
-                                            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-                                            <Drawer
-                                                anchor={anchor}
-                                                open={state[anchor]}
-                                                onClose={toggleDrawer(anchor, false)}>
-                                                <Box
-                                                    sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-                                                    role="presentation"
-                                                    onClick={toggleDrawer(anchor, false)}
-                                                    onKeyDown={toggleDrawer(anchor, false)} >
-                                                    <p className='mag'>
-                                                        برای بزرگنمایی موس را روی عکس ببرید
-                                                    </p>
-                                                    <GlassMagnifier
-                                                        imageSrc={loadedProduct.image3}
-                                                        imageAlt="Example"
-                                                        magnifierSize={'60%'}
-                                                        largeImageSrc={loadedProduct.image3}
-                                                        className="imagemagnify" />
 
-                                                </Box>
-                                            </Drawer>
-                                        </React.Fragment>
-                                    ))}
-                                </div>
-                            </div>
+
+
+
+
+
+
+
+
+
+
+                     
                         </div>
                         <div className='choose-color'>
                             <button className={colorchose ? loadedProduct.color4 : loadedProduct.color2} onClick={chose3}>

@@ -8,7 +8,7 @@ function MainHeader() {
                 <div className='child-nav'>
                     <div >
                         <Link href={`../firstpage`} className='shikpooshan'>
-                            شیک پوشان
+                      
                         </Link>
                     </div>
                     <div >
